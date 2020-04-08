@@ -3,6 +3,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 from ClassPerceptron import Perceptron
 from ClassDecisionRegions import plot_decision_regions
+#SSl認証が正しくなく下記2行がないとPythonのシステム上エラーとなる？らしい（未解決）
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
 
 #データのダウンロード
 df = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data',header=None)
