@@ -24,7 +24,7 @@ X_std = np.copy(X)
 X_std[:, 0] = (X[:, 0] - X[:, 0].mean()) / X[:, 0].std()
 X_std[:, 1] = (X[:, 1] - X[:, 1].mean()) / X[:, 1].std()
 
-ada = LogisticRegression(n_iter=500, eta=0.2)
+ada = LogisticRegression(n_iter=15, eta=0.1)
 ada.fit(X_std, y)
 
 plot_decision_regions(X_std, y, classifier=ada)
